@@ -1,12 +1,16 @@
-import { capitalize, myCalculator, reverseString } from "./fns";
+import { caesarCipher, capitalize, myCalculator, reverseString } from "./fns";
 
 test("Capitalize 'charlie'", () => {
     expect(capitalize("charlie")).toBe("Charlie");
 })
 
+
+
 test("Reverse 'nilbog'", () => {
     expect(reverseString("nilbog")).toBe("goblin")
 })
+
+
 
 test("Add 2 + 2 to equal 4", () => {
     expect(myCalculator.add(2, 2)).toEqual(4);
@@ -22,4 +26,9 @@ test("Multiply 2 * 3 to equal 6", () => {
 
 test("Divide 6 / 2 to equal 3", () => {
     expect(myCalculator.divide(6, 2)).toEqual(3);
+})
+
+
+test("Caesar shift 'xyz' to 'abc'", () => {
+    expect(caesarCipher("xyz", 3)).toBe("abc");
 })
