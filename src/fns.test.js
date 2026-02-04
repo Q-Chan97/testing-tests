@@ -32,3 +32,7 @@ test("Divide 6 / 2 to equal 3", () => {
 test("Caesar shift 'xyz' to 'abc'", () => {
     expect(caesarCipher("xyz", 3)).toBe("abc");
 })
+
+test("Check capitalization- 'HeLLo' to 'KhOOr'", () => {
+    expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+})
