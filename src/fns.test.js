@@ -36,3 +36,7 @@ test("Caesar shift 'xyz' to 'abc'", () => {
 test("Check capitalization- 'HeLLo' to 'KhOOr'", () => {
     expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
 })
+
+test("Check punctuation- 'Hello, World!' to 'Khoor, Zruog!'", () => {
+    expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+})
