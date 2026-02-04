@@ -33,9 +33,15 @@ export function caesarCipher(string, key) {
     ]
 
     function encrypt(char) {
-        const position = alphabet.indexOf(char); // Gets index of letter
+        const isUpperCase = char === char.toUpperCase(); // Remembers capitalization
+        const lowerChar = char.toLowerCase(); // Normalize alphabet lookup
+
+        const position = alphabet.indexOf(lowerChar); // Gets index of letter
         const newPosition = (position + key) % 26; // Transforms index based on key
-        return alphabet[newPosition]; // Returns new letter based on new index position
+
+        const newChar = alphabet[newPosition]; // Sets new letter based on new index position
+
+        return isUpperCase ? newChar.toUpperCase() : newChar; // Returns upperCase character if true
     }
 
     return string.split("").map(encrypt).join(""); // Splits string, encrypts each character, and joins
