@@ -1,9 +1,9 @@
-import { capitalize } from "./fns";
+import { capitalize, reverseString } from "./fns";
 
 test("Capitalize 'charlie'", () => {
     expect(capitalize("charlie")).toBe("Charlie");
 })
 
-test("Reverse 'Nilbog'", () => {
+test("Reverse 'nilbog'", () => {
     expect(reverseString("nilbog")).toBe("goblin")
 })
