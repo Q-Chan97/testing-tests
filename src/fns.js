@@ -33,6 +33,8 @@ export function caesarCipher(string, key) {
     ]
 
     function encrypt(char) {
+        if (!/[a-z]/i.test(char)) return char; // Guard against non-alphabet characters
+
         const isUpperCase = char === char.toUpperCase(); // Remembers capitalization
         const lowerChar = char.toLowerCase(); // Normalize alphabet lookup
 
