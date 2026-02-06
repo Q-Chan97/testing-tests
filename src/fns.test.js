@@ -43,5 +43,5 @@ test("Check punctuation- 'Hello, World!' to 'Khoor, Zruog!'", () => {
 
 
 test("Check Analyze array function- returns average, min, max, and length", () => {
-    expect(analyzeArray([1,8,3,4,2,6])).toEqual({average: 4})
+    expect(analyzeArray([1,8,3,4,2,6])).toEqual({average: 4, min: 1})
 })
