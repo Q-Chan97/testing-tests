@@ -48,3 +48,11 @@ export function caesarCipher(string, key) {
 
     return string.split("").map(encrypt).join(""); // Splits string, encrypts each character, and joins
 }
+
+export function analyzeArray(array) {
+    const average = array.reduce((accumulator, current) => accumulator + current, 0) / array.length;
+
+    return {
+        average,
+    }
+}
