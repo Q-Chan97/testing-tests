@@ -52,7 +52,16 @@ export function caesarCipher(string, key) {
 export function analyzeArray(array) {
     const average = array.reduce((accumulator, current) => accumulator + current, 0) / array.length;
 
+    const min = Math.min(...array);
+
+    const max = Math.max(...array);
+
+    const length = array.length;
+
     return {
         average,
+        min,
+        max,
+        length
     }
 }
